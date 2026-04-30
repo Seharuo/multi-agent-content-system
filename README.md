@@ -1,62 +1,113 @@
 # multi-agent-content-system
 Multi-agent content automation system based on Python asyncio
-# 🚀 Multi-Agent Content Automation System
 
-一个基于多Agent协同的内容运营自动化系统，实现从内容生成、审核到发布的全流程自动化。
-
----
-
-## 📌 项目简介
-
-本项目构建了一个轻量级多Agent系统，通过多个AI Agent协同工作，模拟真实运营团队，实现内容生产流程的自动化。
-
-系统包含以下核心角色：
-- Manager Agent：任务调度与流程控制
-- Writer Agent：内容生成
-- Reviewer Agent：内容审核与优化
-- Publisher Agent：内容发布
-
-通过任务队列驱动，实现多任务并发处理与自动流转。
+> 🚀 A minimal yet scalable multi-agent workflow system for real-world content automation.
 
 ---
 
-## 🧠 核心能力
+## 📌 Overview
 
-- ✅ 多Agent协同（Multi-Agent System）
-- ✅ 自动工作流（Workflow Automation）
-- ✅ 异步任务调度（asyncio + Queue）
-- ✅ 自动审核与重试机制
-- ✅ 可扩展架构（支持接入大模型/API）
+This project implements a multi-agent collaborative system that simulates a real content operations team. It automates the full pipeline of:
+
+- Content Generation  
+- Content Review  
+- Content Publishing  
+
+The system is orchestrated by a central Manager Agent and powered by an asynchronous task queue.
 
 ---
 
-## 🔁 系统流程
+## 🧠 Key Features
+
+- ✅ Multi-Agent Collaboration (Manager, Writer, Reviewer, Publisher)  
+- ✅ Automated Workflow Execution  
+- ✅ Asynchronous Task Scheduling (asyncio)  
+- ✅ Built-in Review & Retry Mechanism  
+- ✅ Scalable and Extensible Architecture  
+
+---
+
+## 🔁 Workflow
+
+```
 Task Input
-↓
+   ↓
 Manager Agent
-↓
+   ↓
 Writer Agent → Reviewer Agent
-↓
-(Fail → Rewrite)
-↓
-Publisher Agent
-↓
-Completed
+                 ↓
+          (Fail → Rewrite)
+                 ↓
+           Publisher Agent
+                 ↓
+             Completed
+```
 
 ---
 
-## ⚙️ 技术架构
+## ⚙️ Tech Stack
 
-- Python 3
-- asyncio（异步执行）
-- 内存任务队列（可扩展为Redis）
-- 模块化Agent设计
+- Python 3  
+- asyncio (for asynchronous execution)  
+- In-memory task queue (extendable to Redis)  
+- Modular Agent-based design  
 
 ---
 
-## 🚀 快速开始
+## 🚀 Getting Started
+
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourname/multi-agent-content-system.git
+git clone https://github.com/your-username/multi-agent-content-system.git
 cd multi-agent-content-system
+```
+
+### 2. Run the project
+
+```bash
 python main.py
+```
+
+---
+
+## 📸 Example Output
+
+```
+🚀 Starting task: Content Marketing Tips
+[Writer] Generating content...
+[Reviewer] Approved
+[Publisher] Publishing content...
+✅ Task completed
+```
+
+---
+
+## 📈 Use Cases
+
+- Automated content generation (e.g., social media, blogs)  
+- Marketing workflow automation  
+- Multi-account content operations  
+- AI-assisted writing pipelines  
+
+---
+
+## 🔮 Future Improvements
+
+- Integration with LLM APIs (OpenAI, local models)  
+- Auto-publishing to social media platforms  
+- Additional agents (SEO, analytics, user profiling)  
+- Persistent storage (PostgreSQL / Redis)  
+- Web dashboard (FastAPI)  
+
+---
+
+## 📌 Project Value
+
+This project transforms manual content operations into an automated, scalable multi-agent workflow system, significantly improving efficiency and reducing human workload.
+
+---
+
+## 📬 Contact
+
+(Optional: add your contact info here)
